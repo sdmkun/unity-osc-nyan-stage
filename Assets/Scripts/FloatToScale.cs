@@ -2,24 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SynthControl : MonoBehaviour
+public class FloatToScale : SynthControl
 {
-    protected float fValue = 0;
+    [SerializeField]
+    private float scale = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void SetFloat(float value)
-    {
-        fValue = value;
+        this.transform.localScale = Vector3.one * this.fValue * scale;
     }
 }

@@ -2,24 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SynthControl : MonoBehaviour
+public class FloatToAngle : SynthControl
 {
-    protected float fValue = 0;
+    [SerializeField]
+    private float speed = 3.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void SetFloat(float value)
-    {
-        fValue = value;
+        transform.Rotate(new Vector3(this.fValue * speed, 0, 0));
+        this.fValue = 0;
     }
 }
