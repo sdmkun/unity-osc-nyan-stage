@@ -19,6 +19,7 @@ public class GeometryEmitter : MonoBehaviour
         var draft = MeshDraft.Sphere(radius, hSegment, vSegment);
         var mesh = draft.ToMesh();
         m_obj = new GameObject("sphere");
+        m_obj.transform.parent = this.transform;
         m_obj.AddComponent<MeshRenderer>();
         var mf = m_obj.AddComponent<MeshFilter>();
         mf.sharedMesh = mesh;

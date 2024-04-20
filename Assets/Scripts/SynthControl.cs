@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OSCReceiver : MonoBehaviour
+public class SynthControl : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class OSCReceiver : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetFloat(float value)
+    {
+
     }
 }
